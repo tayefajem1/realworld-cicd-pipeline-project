@@ -20,11 +20,10 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHubnew'
     repository: 'tayefajem'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'tayefajem/olajunior:1'
+    tags: 'tayefajem/family:1'
