@@ -26,4 +26,4 @@ steps:
     repository: 'tayefajem'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'tayefajem/family:1'
+    tags: 'family:1'
