@@ -22,9 +22,9 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'System.DefaultWorkingDirectory'
+    SourceFolder: '$(system.defaultworkingdirectory)'
     Contents: '**/*.jar'
-    TargetFolder: 'Build.ArtifactStagingDirectory'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: Docker@2
   inputs:
