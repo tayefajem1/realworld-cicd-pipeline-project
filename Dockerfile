@@ -11,4 +11,4 @@ COPY target/maven-project-1.0-SNAPSHOT.jar /app/maven-project-1.0-SNAPSHOT.jar
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "maven-project-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "target/maven-project-1.0-SNAPSHOT.jar"]
