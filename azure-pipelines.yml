@@ -23,7 +23,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**/*.jar'
+    Contents: 'deploy_taye.yml'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: Docker@2
