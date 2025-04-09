@@ -29,11 +29,11 @@ steps:
     tags: '1'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'system.defaultworkingdirectory'
+    SourceFolder: 'System.DefaultWorkingDirectory'
     Contents: 'deploy_taye.yml'
-    TargetFolder: 'build.artifactstagingdirectory'
+    TargetFolder: 'Build.ArtifactStagingDirectory'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
