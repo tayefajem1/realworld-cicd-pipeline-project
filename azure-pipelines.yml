@@ -27,4 +27,4 @@ steps:
     repository: 'tayefajem'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'tayefajem/olajunior:v1'
+    tags: 'tayefajem/olajunior:1'
