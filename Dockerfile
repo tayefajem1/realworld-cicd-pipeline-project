@@ -1,10 +1,14 @@
-# Use Maven as the base image
-FROM maven:3.8-openjdk-11
+# Use an official OpenJDK runtime as a parent image
+FROM openjdk:11-jre-slim
 
-# Set the working directory inside the container
+# Set the working directory in the container
 WORKDIR /app
 
-COPY ./target/smaven-project-1.0-SNAPSHOT.jar /app/
+# Copy the application JAR file into the container
+COPY target/maven-project-1.0-SNAPSHOT.jar /app/maven-project-1.0-SNAPSHOT.jar
 
-# Command to run the Java application
-CMD ["java", "-jar", "target/maven-project-1.0-SNAPSHOT.jar"]
+# Expose the port the application runs on
+EXPOSE 8080
+
+# Run the application
+ENTRYPOINT ["java", "-jar", "maven-project-1.0-SNAPSHOT.jar"]
